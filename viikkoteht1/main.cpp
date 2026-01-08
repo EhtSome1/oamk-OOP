@@ -7,7 +7,10 @@ int game(int maxnum);
 
 int main()
 {
-    int pelinMaara = game(40);
+    int input = 0;
+    cout << "Anna max numero: ";
+    cin >> input;
+    int pelinMaara = game(input);
 
     cout << "Arvausten maara: " << pelinMaara << endl;
 
