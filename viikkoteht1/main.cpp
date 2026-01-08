@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 
 using namespace std;
 
@@ -20,8 +21,8 @@ int main()
 int game(int maxnum)
 {
     int maara = 0;
-    int x = 99;
-    srand(7);
+    int x = -1;
+    srand(time(0));
     int luku = rand() % maxnum;
     //cout<<luku<<endl;
     while (x != luku)
