@@ -12,7 +12,9 @@ Game::Game(int i) {
     maxNumber = i;
     cout<<"GAME CONSTRUCTOR: Initialize game"<<endl<<endl; //debug
 }
-Game::~Game(){}
+Game::~Game(){
+    cout<<"GAME DESTRUCTOR: Game destryed"; //debug
+}
 void Game::play(){
     cout<<"GAME PLAY: starting game"<<endl<<endl; //debug
     randomNumber = Game::generateRandomNum(maxNumber);
