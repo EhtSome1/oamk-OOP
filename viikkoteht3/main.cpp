@@ -14,6 +14,6 @@ int main()
     ItalianChef mario("Mario");
 
     mario.makeSalad(9);
-    mario.askSecret("pizza", 12,12);
+    mario.askSecret("pizza", 20,10);
     return 0;
 }

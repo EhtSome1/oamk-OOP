@@ -25,7 +25,7 @@ bool ItalianChef::askSecret(string pw, int f, int w)
 }
 int ItalianChef::makepizza()
 {
-    int pizzas = ((flour/5)+(water/5))/2;
+    int pizzas = (min((flour/5),(water/5)));
     cout<<"ItalianChef "<<chefName<< " with "<<flour<<" flour and "<<water<<" water can make "<<pizzas<<" pizzas"<<endl;
     return pizzas;
 }
