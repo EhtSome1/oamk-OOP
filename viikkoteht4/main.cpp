@@ -6,13 +6,22 @@ using namespace std;
 
 int main()
 {
-    Asiakas Aapeli("Aapeli", 1000);
+    Asiakas Aapeli("Aapeli", 2000);
 
     Aapeli.showSaldo();
 
     cout<<endl;
 
-    Aapeli.talletus(250);
+    Aapeli.luotonNosto(200);
+    Aapeli.showSaldo();
+
+    Aapeli.luotonMaksu(100);
+
+    Aapeli.showSaldo();
+
+
+
+    /*Aapeli.talletus(250);
     Aapeli.luotonNosto(150);
     Aapeli.showSaldo();
 
@@ -30,7 +39,7 @@ int main()
     cout<<endl;
 
     cout<<Bertta.getNimi()<<endl;
-    Bertta.showSaldo();
+    Bertta.showSaldo();*/
 
     return 0;
 }
