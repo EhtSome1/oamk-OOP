@@ -29,9 +29,9 @@
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>150</y>
-     <width>281</width>
+     <width>301</width>
      <height>271</height>
     </rect>
    </property>
@@ -236,10 +236,10 @@
   <widget class="QLabel" name="prevEq">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>120</y>
-     <width>291</width>
-     <height>16</height>
+     <width>281</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">

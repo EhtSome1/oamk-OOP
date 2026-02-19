@@ -54,7 +54,7 @@ public:
         menuButton->setGeometry(QRect(10, 10, 91, 21));
         gridLayoutWidget = new QWidget(teht2);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(30, 150, 281, 271));
+        gridLayoutWidget->setGeometry(QRect(20, 150, 301, 271));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setSizeConstraint(QLayout::SizeConstraint::SetNoConstraint);
@@ -159,7 +159,7 @@ public:
 
         prevEq = new QLabel(teht2);
         prevEq->setObjectName("prevEq");
-        prevEq->setGeometry(QRect(20, 120, 291, 16));
+        prevEq->setGeometry(QRect(30, 120, 281, 20));
         screen = new QLineEdit(teht2);
         screen->setObjectName("screen");
         screen->setGeometry(QRect(20, 70, 301, 71));

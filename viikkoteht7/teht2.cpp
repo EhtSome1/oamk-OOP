@@ -73,35 +73,43 @@ void teht2::equationHandler()
     }
 
     qDebug()<<"Starting calculation: "<<ui->screen->text();
+    qDebug()<<split.size();
 
     for (int i = 1; i+2 <= split.size(); i+=2) {
         qDebug()<<"In * / calculator";
-        if (split[i] == "*" || split[i] == "/") {
-            int result;
+        bool con = false;
+        do {
+            con = false;
+            if (split[i] == "*" || split[i] == "/") {
+                double result;
 
-            if (split[i] == "*") {
-                result = split[i-1].toInt() * split[i + 1].toInt();
-                qDebug()<<split[i-1]<<" * "<<split[i + 1];
+                if (split[i] == "*") {
+                    result = split[i-1].toDouble() * split[i + 1].toDouble();
+                    qDebug()<<split[i-1]<<" * "<<split[i + 1];
+                }
+                else {
+                    result = split[i-1].toDouble() / split[i + 1].toDouble();
+                    qDebug()<<split[i-1]<<" / "<<split[i + 1];
+                }
+                split[i-1] = QString::number(result);
+                split.removeAt(i + 1);
+                split.removeAt(i);
             }
-            else {
-                result = split[i-1].toInt() / split[i + 1].toInt();
-                qDebug()<<split[i-1]<<" / "<<split[i + 1];
+            if(i < split.size()){
+                if(split[i] == "*" || split[i] == "/") {con = true;}
             }
-            split[i-1] = QString::number(result,10);
-            split.removeAt(i + 1);
-            split.removeAt(i);
-        }
+        } while(con);
     }
     qDebug()<<"Out * / calculator";
     for (int i = 1; i+2 <= split.size(); i+=2) {
         qDebug()<<"In + - calculator";
         if (split[i] == "+") {
             qDebug()<<split[0]<<" + "<<split[i + 1];
-            split[0] = QString::number(split[0].toInt() + split[i + 1].toInt(), 10);
+            split[0] = QString::number(split[0].toDouble() + split[i + 1].toDouble());
         }
         else if (split[i] == "-") {
             qDebug()<<split[0]<<" - "<<split[i + 1];
-            split[0] = QString::number(split[0].toInt() - split[i + 1].toInt(), 10);
+            split[0] = QString::number(split[0].toDouble() - split[i + 1].toDouble());
         }
     }
     qDebug()<<"Out + - calculator";
